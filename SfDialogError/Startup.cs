@@ -35,7 +35,7 @@ namespace SfDialogError
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
 
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzA2ODI1QDMxMzgyZTMyMmUzMFpPbkw0NjdjS2N4V0VGNzNLYzBva3doMVFHbkV0d2NPTG1jVzY1aFY3cGM9");
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("");
 
             if (env.IsDevelopment())
             {
