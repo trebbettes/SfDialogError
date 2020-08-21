@@ -1,0 +1,30 @@
+﻿@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+@inject IJSRuntime JSRuntime
+
+@page "/test"
+
+<SfButton @onclick="@OpenDialog">Open Dialog (Not Required)</SfButton>
+
+<SfDialog Width="250px" ShowCloseIcon="true" IsModal="true" @bind-Visible="@IsVisible">
+    <DialogTemplates>
+        <Header> Dialog </Header>
+        <Content> This is a dialog with header </Content>
+    </DialogTemplates>
+</SfDialog>
+<SfButton @onclick="@Close">2 - Close This Window</SfButton>
+
+
+@code {
+    private bool IsVisible { get; set; }
+
+    private void OpenDialog()
+    {
+        this.IsVisible = true;
+    }
+
+    private async Task Close()
+    {
+        await JSRuntime.InvokeVoidAsync("CloseWindow");
+    }
+}
