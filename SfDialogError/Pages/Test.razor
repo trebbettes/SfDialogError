@@ -6,16 +6,17 @@
 
 <SfButton @onclick="@OpenDialog">Open Dialog (Not Required)</SfButton>
 
+<SfButton @onclick="@Close">Close This Window - Wait 60 seconds For Error</SfButton>
+
 <SfDialog Width="250px" ShowCloseIcon="true" IsModal="true" @bind-Visible="@IsVisible">
     <DialogTemplates>
         <Header> Dialog </Header>
         <Content> This is a dialog with header </Content>
     </DialogTemplates>
 </SfDialog>
-<SfButton @onclick="@Close">Close This Window - Wait 60 seconds For Error</SfButton>
-
 
 @code {
+
     private bool IsVisible { get; set; }
 
     private void OpenDialog()
